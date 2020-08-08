@@ -1,0 +1,7 @@
+
+For generating Netmodule files:
+		csc /t:module addition.cs
+		csc /t:module multiplication.cs
+		
+For calc.dll file:
+		csc /t:libarary /out:Calc.dll /addmodule:addition.netmodule /addmodule:multiplication.netmodule
