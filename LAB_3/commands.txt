@@ -1,0 +1,19 @@
+Steps for Create Strong named assembly:
+
+		csc /t:library /out:calc.dll /keyfile:mykey.snk calc.cs
+
+		gacutil -i calc.dll 
+
+
+For New version:
+
+		csc /t:library /keyfile:mykey.snk /out:calcn.dll calc_new.cs
+
+		gacutil -i calcn.dll 
+
+
+
+
+For public token:
+
+		sn -T calcn.dll
