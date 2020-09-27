@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "test2";
+}
+
+<h1>Test2 of sum</h1>
+<br />
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+    <ol>
+        <li>
+            @Html.Label("Number1")
+            @Html.TextBox("numb1")
+        </li>
+        <br />
+        <li>
+            @Html.Label("Number2")
+            @Html.TextBox("numb2")
+        </li>
+        <br />
+        <input type="submit" value="Submit" />
+
+    </ol>
+}
+
+@if (@ViewBag.sum != null)
+{
+<div id="sum_ans">
+   Sum is  @ViewBag.sum.
+</div>
+}
+

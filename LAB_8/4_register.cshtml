@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "register";
+}
+
+<h1>register</h1>
+<br />
+@using (Html.BeginForm("registerForm", "Home", FormMethod.Post))
+{
+    <ol>
+        <li>
+            @Html.Label("Name")
+            @Html.TextBox("name")
+        </li>
+        <br />
+        <li>
+            @Html.Label("Mobile")
+            @Html.TextBox("mob")
+        </li>
+        <li>
+            @Html.Label("Email")
+            @Html.TextBox("email")
+        </li>
+        <li>
+            @Html.Label("Password")
+            <input type="password" name="password" required />
+        </li>
+        <br />
+        <input type="submit" value="Submit" />
+
+    </ol>
+}
+
+@if (@ViewBag.name != null)
+{
+    <div>Name: @ViewBag.name</div>
+    <div>Email: @ViewBag.email</div>
+    <div>Mobile: @ViewBag.mobile</div>
+    <div>Password: @ViewBag.password</div>
+
+}
