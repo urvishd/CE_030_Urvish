@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMT", "MMT.csproj", "{25D745AC-9E20-4267-96EF-9C0FCF51CEFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25D745AC-9E20-4267-96EF-9C0FCF51CEFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D745AC-9E20-4267-96EF-9C0FCF51CEFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D745AC-9E20-4267-96EF-9C0FCF51CEFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D745AC-9E20-4267-96EF-9C0FCF51CEFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E528787D-EB15-4BAD-9CF3-D5E8A7CE7403}
+	EndGlobalSection
+EndGlobal

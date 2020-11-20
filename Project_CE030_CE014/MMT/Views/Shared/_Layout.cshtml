@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>@ViewData["Title"] - MMT</title>
+    <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="~/css/site.css" />-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/assets/css/gradient-navbar-1.css">
+    <link rel="stylesheet" href="~/assets/css/gradient-navbar.css">
+    <link href="~/css/allpackages.css" rel="stylesheet" />
+    <link href="~/css/Dcard.css" rel="stylesheet" />
+    <link href="~/css/netbanking.css" rel="stylesheet" />
+
+    <!-- <script src="~/assets/js/homepage.js"></script>-->
+    <link href="~/assets/css/indexpage.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/css/homepage.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!--<style src="~/css/homepage.css"/>-->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md" id="app-navbar" style="margin-top:-40px">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="icon ion-ios-infinite" id="brand-logo"></i></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link active" asp-controller="home" asp-action="Index">Home</a></li>
+                        @if (User.IsInRole("Admin"))
+                        {
+
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="packages" asp-action="Index">Manage Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="Bookings" asp-action="Index">All Bookings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="Dcards" asp-action="Index">Debit Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="Netbankings" asp-action="Index">Netbanking</a>
+                            </li>
+                        }
+                        else
+                        {
+
+                            <li class="nav-item"><a class="nav-link" asp-controller="AllPackage" asp-action="Index">Packages</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="CustomerBooking" asp-action="Index">My Bookings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="Payment" asp-action="ContactUs">Contact Us</a>
+                            </li>
+
+                        }
+
+                        <partial name="_LoginPartial.cshtml" />
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MMT</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>-->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - MMT - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <footer class="footer-distributed" style="position:relative">
+
+        <div class="footer-left">
+
+            <h3>About <span>Make My Trip</span></h3>
+
+            <p class="footer-links">
+                <a asp-controller="home" asp-action="Index">Home</a>
+                |
+                <a asp-controller="Payment" asp-action="ContactUs">Contact</a>
+            </p>
+
+            <p class="footer-company-name">© 2020 MMT Pvt. Ltd.</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Surat-395006</span></p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+918780484915</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:devaniurvish881@gmail.com">support@mmt.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the site</span>
+
+            </p>
+            <div class="footer-icons">
+                <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                <a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+                <a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

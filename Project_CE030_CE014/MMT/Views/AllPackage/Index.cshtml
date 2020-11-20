@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MMT.Models.packages>
+
+@{
+    ViewData["Title"] = "AllPackages";
+}
+
+    <h1 align="center" style="color: darkviolet">All Packages.....</h1>
+
+    
+    
+        @foreach (var item in Model)
+        {
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-horizontal">
+                                <div class="img-square-wrapper">
+                                    <img class="zoom" src="~/img4.jpg" alt="Card image cap" height="295" width="390">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title" style="font-size: 25px"><b>@item.Name</b></h4>
+
+                                    <p class="card-text">@item.Duration</p>
+                                    <h3 class="card-text">₹@item.Amount</h3>
+                                    <br><br><br>
+                                    <a class="button button2" asp-action="Viewpackage" asp-controller="AllPackage" asp-route-id="@item.PackagesID" style="margin-right: 20px">View Details</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <tr>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Name)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Places)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Amount)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.discount)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Duration)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Facilities)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Description)
+             </td>
+
+         </tr>-->
+        }
+    

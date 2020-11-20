@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    if (@ViewBag.paymentStatus == "fail")
+    {
+        <h1>@ViewBag.message1</h1>
+        <a class="button button2" asp-action="Viewpackage" asp-controller="AllPackage" asp-route-id="@ViewBag.pkgid" style="margin-right: 20px">Try again</a>
+    }
+    else
+    {
+        <h1>@ViewBag.message1</h1>
+        <br />
+        <h1>Your Booking ID is @ViewBag.tid .Thank for transacting with us!</h1>
+        <h3>Please note your booking ID for future reference.</h3>
+        <a class="button button2" asp-action="Index" asp-controller="Home"  style="margin-right: 20px">Homepage</a>
+    }
+}

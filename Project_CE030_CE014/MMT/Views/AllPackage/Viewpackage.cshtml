@@ -1,0 +1,61 @@
+﻿@model MMT.Models.packages
+@{
+    ViewData["Title"] = "Viewpackage";
+    ViewBag.Amount = Model.Amount;
+}
+
+<h1>Package Details</h1>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Places)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Places)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Amount) INR
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.discount)
+            
+        </dt>
+        
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.discount)%
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Facilities)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Facilities)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="button button2" asp-action="Checkout" asp-controller="AllPackage" asp-route-id="@Model.PackagesID" style="margin-right: 20px">Book Package</a>
+</div>
+

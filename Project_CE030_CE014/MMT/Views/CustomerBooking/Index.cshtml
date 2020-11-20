@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MMT.Models.Booking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Your Upcoming Trips</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PackageName)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.NumberofPersons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JourneyDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentMethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageName)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberofPersons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JourneyDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            @if (item.status == "Booked")
+            {
+            <td>
+                <a asp-action="Cancel" asp-route-id="@item.BookingID">Cancel Booking</a> 
+               
+            </td>
+            }
+        </tr>
+}
+    </tbody>
+</table>
